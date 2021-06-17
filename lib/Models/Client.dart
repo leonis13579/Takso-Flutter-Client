@@ -9,7 +9,7 @@ class Client {
 
   ObsrvableField<Point?> homeAddress = ObsrvableField();
   ObsrvableField<Point?> workAddress = ObsrvableField();
-  ObsrvableField<List<Point>?> favouriteAddresses = ObsrvableField();
+  ObsrvableField<Map<String, Point>?> favouriteAddresses = ObsrvableField();
 
   static Client _instance = Client._constructor();
   factory Client() {

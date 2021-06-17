@@ -1,5 +1,11 @@
 class Point {
-  String? address;
+  String address;
   double? pointLatitude;
   double? pointLongitude;
+
+  Point({
+    required this.address,
+    this.pointLatitude,
+    this.pointLongitude,
+  });
 }

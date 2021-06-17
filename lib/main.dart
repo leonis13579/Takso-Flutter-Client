@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:takso_flutter_client/Views/auth_view.dart';
 import 'package:takso_flutter_client/Views/client_info_view.dart';
 import 'package:takso_flutter_client/Views/client_view.dart';
+import 'package:takso_flutter_client/Views/favourite_address_info_view.dart';
 import 'package:takso_flutter_client/Views/favourite_address_view.dart';
 import 'package:takso_flutter_client/Views/history_view.dart';
 import 'package:takso_flutter_client/Views/map_view.dart';
@@ -17,6 +18,7 @@ void main() {
         "/client": (context) => ClientView(),
         "/client_info": (context) => ClientInfoView(),
         "/favourite_address": (context) => FavouriteAddressView(),
+        "/favourite_address_info": (context) => FavouriteAddressInfoView(),
         "/history": (context) => HistoryView(),
       },
       theme: ThemeData(

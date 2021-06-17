@@ -62,14 +62,14 @@ class _ClientInfoState extends State<ClientInfo> {
                 CustomText(
                   Client().lastName.value ?? "",
                   color: Colors.white,
-                  textSize: 20,
+                  textSize: 25,
                   outMargin: EdgeInsets.symmetric(vertical: 2.5),
                   textAlign: TextAlign.start,
                 ),
                 CustomText(
                   Client().name.value ?? "",
                   color: Colors.white,
-                  textSize: 20,
+                  textSize: 25,
                   outMargin: EdgeInsets.symmetric(vertical: 2.5),
                   textAlign: TextAlign.start,
                 ),
