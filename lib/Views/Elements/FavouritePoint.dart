@@ -26,6 +26,9 @@ class FavouritePoint extends StatelessWidget {
     }
 
     return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
       margin: EdgeInsets.only(top: 15, left: 15, right: 15),
       color: Theme.of(context).primaryColor,
       child: Padding(

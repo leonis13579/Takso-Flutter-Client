@@ -5,9 +5,7 @@ class ObsrvableField<T> {
   T? get value => _value;
   set value(T? value) {
     _value = value;
-    observeMethods.forEach((element) {
-      element();
-    });
+    updated();
   }
 
   ObsrvableField({T? value, List<Function>? methods}) {
@@ -17,5 +15,11 @@ class ObsrvableField<T> {
     if (methods != null) {
       observeMethods.addAll(methods);
     }
+  }
+
+  void updated() {
+    observeMethods.forEach((element) {
+      element();
+    });
   }
 }

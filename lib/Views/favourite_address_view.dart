@@ -11,6 +11,22 @@ class FavouriteAddressView extends StatefulWidget {
 }
 
 class _FavouriteAddressViewState extends State<FavouriteAddressView> {
+  void updateData() {
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    Client().addObservableMethod(updateData);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    Client().deleteObservableMethod(updateData);
+  }
+
   @override
   Widget build(BuildContext context) {
     Map<String, Point?> points = {

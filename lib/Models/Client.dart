@@ -30,7 +30,7 @@ class Client {
 
     client.homeAddress.value = json["homeAddress"];
     client.workAddress.value = json["workAddress"];
-    client.favouriteAddresses.value = json["favouriteAddresses"];
+    client.favouriteAddresses.value = json["favouriteAddresses"] ?? {};
 
     _instance = client;
   }
@@ -54,6 +54,9 @@ class Client {
     lastName.observeMethods.add(method);
     phone.observeMethods.add(method);
     email.observeMethods.add(method);
+    homeAddress.observeMethods.add(method);
+    workAddress.observeMethods.add(method);
+    favouriteAddresses.observeMethods.add(method);
   }
 
   void deleteObservableMethod(Function method) {
@@ -68,6 +71,15 @@ class Client {
     }
     if (email.observeMethods.contains(method)) {
       email.observeMethods.remove(method);
+    }
+    if (homeAddress.observeMethods.contains(method)) {
+      homeAddress.observeMethods.remove(method);
+    }
+    if (workAddress.observeMethods.contains(method)) {
+      workAddress.observeMethods.remove(method);
+    }
+    if (favouriteAddresses.observeMethods.contains(method)) {
+      favouriteAddresses.observeMethods.remove(method);
     }
   }
 }
